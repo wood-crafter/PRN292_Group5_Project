@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F776BF3-2770-4A21-9DAE-A4F88EBC0FFF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectDemo</RootNamespace>
+    <AssemblyName>ProjectDemo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuyNow\HistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyNow\HistoryView.Designer.cs">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyNow\PayControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyNow\PayControl.Designer.cs">
+      <DependentUpon>PayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyNow\ViewHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BuyNow\ViewHistory.Designer.cs">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\CartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cart\CartControl.Designer.cs">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\FoodItiemCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cart\FoodItiemCart.Designer.cs">
+      <DependentUpon>FoodItiemCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cart\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\FoodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\FoodControl.Designer.cs">
+      <DependentUpon>FoodControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\FoodDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\FoodDetail.Designer.cs">
+      <DependentUpon>FoodDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\FoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\FoodItem.Designer.cs">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\LiquorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\LiquorControl.Designer.cs">
+      <DependentUpon>LiquorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword\EnterCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword\EnterCode.Designer.cs">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword\ForgotAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword\ForgotAccount.Designer.cs">
+      <DependentUpon>ForgotAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword\NewPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword\NewPassword.Designer.cs">
+      <DependentUpon>NewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\HomeContol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home\HomeContol.Designer.cs">
+      <DependentUpon>HomeContol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegistration\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginRegistration\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegistration\LoginChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginRegistration\LoginChild.Designer.cs">
+      <DependentUpon>LoginChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginRegistration\Registration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginRegistration\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantContent.Designer.cs">
+      <DependentUpon>RestaurantContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Restaurant\RestaurantControl.Designer.cs">
+      <DependentUpon>RestaurantControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="session\SessionAccount.cs" />
+    <EmbeddedResource Include="BuyNow\HistoryView.resx">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyNow\PayControl.resx">
+      <DependentUpon>PayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyNow\ViewHistory.resx">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart\CartControl.resx">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart\FoodItiemCart.resx">
+      <DependentUpon>FoodItiemCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\FoodControl.resx">
+      <DependentUpon>FoodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\FoodDetail.resx">
+      <DependentUpon>FoodDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\FoodItem.resx">
+      <DependentUpon>FoodItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\LiquorControl.resx">
+      <DependentUpon>LiquorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword\EnterCode.resx">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword\ForgotAccount.resx">
+      <DependentUpon>ForgotAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword\NewPassword.resx">
+      <DependentUpon>NewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\HomeContol.resx">
+      <DependentUpon>HomeContol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginRegistration\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginRegistration\LoginChild.resx">
+      <DependentUpon>LoginChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginRegistration\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaurant\RestaurantContent.resx">
+      <DependentUpon>RestaurantContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaurant\RestaurantControl.resx">
+      <DependentUpon>RestaurantControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5af305e5-f557-4b5f-a740-230df11739bf}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{3e64dfbf-f9a3-44d5-b4f4-01a0464bacfd}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
